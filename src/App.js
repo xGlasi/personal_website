@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import Header from './Header.jsx'
+import Footer from './Footer.jsx'
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Blog from './Blog.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-slate-900 flex flex-col h-screen">
+    <Router>
+      <Header/>
+      <main className="flex-grow overflow-auto">
+          <Blog/>
+        </main>
+      <Footer/>
+    </Router>
     </div>
+
   );
 }
 
