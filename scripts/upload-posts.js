@@ -4,8 +4,8 @@ const asciidoctor = require('asciidoctor')();
 const { createClient } = require('@supabase/supabase-js');
 
 // Ersetze 'deine_supabase_url' und 'dein_angehefteter_api_key' durch deine Supabase Projektangaben
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseUrl = "https://gfecmvynsdgucmrxtexf.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmZWNtdnluc2RndWNtcnh0ZXhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk5MzQwMzUsImV4cCI6MjAyNTUxMDAzNX0.68rY1zhehU4gf6Nqwys6kkQLgUiGOeZ5ZH5binfjkzo";
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const BLOG_DIR = './public/blog';
