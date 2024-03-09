@@ -37,7 +37,7 @@ export default function Blog() {
           key={post.id}
           title={post.title}
           excerpt={post.excerpt}
-          imageUrl={post.imageUrl}
+          imageUrl={post.cover_image_url}
           date={post.created_at}
           tags={post.tags}
         />
