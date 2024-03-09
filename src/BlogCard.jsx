@@ -1,13 +1,13 @@
 export default function BlogCard({ title, excerpt, imageUrl, date, tags }) {
     console.log(imageUrl)
     return (
-      <div className="bg-white rounded shadow p-4 flex flex-col">
-        <img width={200} height={200} src={imageUrl} alt={`Cover for ${title}`} className="rounded-t mb-4" />
+      <div className="rounded p-4 flex flex-col bg-slate-800">
+        <img src={imageUrl} alt={`Cover for ${title}`} className="rounded-t mb-4" />
         <div className="flex-grow">
-          <h3 className="text-gray-900 mb-2">{title}</h3>
-          <p className="text-gray-700 mb-4">{excerpt}</p>
+          <h3 className="text-white mb-2">{title}</h3>
+          <p className="text-white mb-4">{excerpt}</p>
         </div>
-        <div className="flex justify-between items-center text-sm text-gray-600">
+        <div className="flex justify-between items-center text-sm text-white">
           <time dateTime={date}>{new Date(date).toLocaleDateString()}</time>
           <ul className="flex">
             {tags.map(tag => (

@@ -1,4 +1,3 @@
-
 export default function Header() {
     return (
         <footer className="text-white p-4 flex space-x-5">

@@ -31,14 +31,14 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
       {posts.map((post) => (
         <BlogCard
           key={post.id}
           title={post.title}
           excerpt={post.excerpt}
           imageUrl={post.cover_image_url}
-          date={post.created_at}
+          date={post.published_at}
           tags={post.tags}
         />
       ))}
