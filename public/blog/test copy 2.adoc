@@ -1,6 +1,6 @@
 :title: Test-Titelasdf2
 :excerpt: Zusammenfassungasdf2.
 :tags: TestTagasdf2
-:cover_image_url: https://supabase.com/dashboard/img/supabase-logo.svg
+:cover_image_url: ./resources/image.webp
 :published_at: 2021-01-01
 :slug: test-slugasdf testasdfasdfasdf2
