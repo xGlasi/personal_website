@@ -3,4 +3,4 @@
 :tags: TestTag
 :cover_image_url: https://supabase.com/dashboard/img/supabase-logo.svg
 :published_at: 2021-01-01
-:slug: test-slug
+:slug: test-slug test
