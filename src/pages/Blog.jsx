@@ -31,7 +31,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 p-6">
       {posts.map((post) => (
         <BlogCard
           key={post.id}

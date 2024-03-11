@@ -1,21 +1,27 @@
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Blog from './Blog.jsx';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home.jsx';
+import Blog from './pages/Blog.jsx'
+import Header from './pages/Header.jsx'
+import Footer from './pages/Footer.jsx'
 
 function App() {
   return (
-    <div className="bg-slate-900 flex flex-col h-screen">
-    <Router>
-      <Header/>
-      <main className="flex-grow overflow-auto">
-          <Blog/>
+    <>
+      <div className="bg-slate-950 flex flex-col h-screen">
+        <Header/>
+      
+        <main className="flex-grow overflow-auto">
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/Blog" element={<Blog/>}/>
+          </Routes>
         </main>
-      <Footer/>
-    </Router>
-    </div>
+
+        <Footer/>
+      </div>
+    </>
 
   );
 }
