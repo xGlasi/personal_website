@@ -51,13 +51,13 @@ export default function Home() {
                           </a>
                       </li>
                       <li className="p-1">
-                        <a href="https://www.linkedin.com/in/andreas-glashauser-008551252/" alt="LinkedIn Logo">
-                          <img height={30} width={30} src="resources/logo_linkedIn.png"/>
+                        <a href="https://www.linkedin.com/in/andreas-glashauser-008551252/">
+                          <img height={30} width={30} src="resources/logo_linkedIn.png" alt="LinkedIn Logo"/>
                         </a>
                       </li>
                       <li className="p-1">
-                          <a href="https://www.xing.com/profile/Andreas_Glashauser/" alt="Xing Logo">
-                              <img height={30} width={30} src="resources/logo_xing.svg"/>
+                          <a href="https://www.xing.com/profile/Andreas_Glashauser/">
+                              <img height={30} width={30} src="resources/logo_xing.svg" alt="Xing Logo"/>
                           </a>
                       </li>
                       <li className="p-1">
