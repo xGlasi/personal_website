@@ -1,10 +1,6 @@
 import LatestBlogs from "./LatestBlogs";
 import React, { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import BinaryBackground from "../BinaryBackground";
-import { TypeAnimation } from "react-type-animation";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/light-async";
 import CSharpCodeTypewriter from "./CSharpCodeTypeWriter";
 
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
@@ -55,18 +51,18 @@ export default function Home() {
                           </a>
                       </li>
                       <li className="p-1">
-                        <a href="https://www.linkedin.com/in/andreas-glashauser-008551252/">
+                        <a href="https://www.linkedin.com/in/andreas-glashauser-008551252/" alt="LinkedIn Logo">
                           <img height={30} width={30} src="resources/logo_linkedIn.png"/>
                         </a>
                       </li>
                       <li className="p-1">
-                          <a href="https://www.xing.com/profile/Andreas_Glashauser/">
+                          <a href="https://www.xing.com/profile/Andreas_Glashauser/" alt="Xing Logo">
                               <img height={30} width={30} src="resources/logo_xing.svg"/>
                           </a>
                       </li>
                       <li className="p-1">
                           <a href="https://twitter.com/andigls">
-                              <img height={30} width={30} src="resources/logo_x.png"/>
+                              <img height={30} width={30} src="resources/logo_x.png" alt="X Logo"/>
                           </a>
                       </li>
                   </ol>
