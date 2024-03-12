@@ -2,6 +2,9 @@ import LatestBlogs from "./LatestBlogs";
 import React, { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import BinaryBackground from "../BinaryBackground";
+import { TypeAnimation } from "react-type-animation";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/light-async";
 
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
 const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
@@ -33,14 +36,15 @@ export default function Home() {
     return (
         <>
           <div className="relative text-white p-20 flex flex-grow justify-between rounded-lg z-10">
-              <div className="bg-slate-900 p-5 rounded-lg z-20">
-                  <p className="text-6xl font-bold">
-                      Hi, I'm Andreas Glashauser 
-                  </p>
-                  <p className="pt-10 text-2xl">
-                      I am a developer and now studying artificial intelligence.<br></br>
-                      Feel free to check out my latest work on GitHub or catch up with <br/>
-                      my thoughts and discoveries on my blog. 
+              <div className="bg-slate-900 p-5 rounded-lg z-20 w-[500px]">
+                  <p className="tex-6xl font-bold">
+                    <TypeAnimation
+                        style={{ whiteSpace: 'pre', display: 'block' }}                    sequence={[
+                        'using System;\n\n public class Program \n{\n\t public static void Main(String[] args)\n\t{\n\t\tConsole.WriteLine("Hello World!");\n\t}\n}',
+                      ]}
+                      wrapper="span"
+                      speed={50}
+                    />
                   </p>
               </div>
 
@@ -74,6 +78,7 @@ export default function Home() {
                       </li>
                   </ol>
               </div>
+
           </div>
 
           <div className="z-30 relative">
