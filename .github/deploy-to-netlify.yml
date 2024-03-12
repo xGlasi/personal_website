@@ -1,0 +1,33 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main  # Setze hier den Branch deiner Wahl ein
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Setze die Node.js-Version deiner Wahl
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Install Netlify CLI
+        run: npm install netlify-cli -g
+
+      - name: Deploy to Netlify
+        run: netlify deploy --prod
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

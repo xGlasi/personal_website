@@ -26,7 +26,7 @@ export default function LatestBlogs({ posts }) {
 
     return (
         <>
-            <div className="z-10 relative  bg-slate-900 p-5 mx-20 rounded-lg">
+            <div className="z-10 relative  border border-customLightGray  p-5 mx-20 rounded-lg">
                 <div>
                     <p className="text-white text-3xl font-bold pl-5">
                         My latest blog posts:

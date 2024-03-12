@@ -9,7 +9,7 @@ import Footer from './pages/Footer.jsx'
 function App() {
   return (
     <>
-      <div className="bg-slate-950 flex flex-col h-screen">
+      <div className="bg-customDarkGray flex flex-col h-screen">
         <Header/>
       
         <main className="flex-grow overflow-auto">

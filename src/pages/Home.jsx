@@ -5,6 +5,7 @@ import BinaryBackground from "../BinaryBackground";
 import { TypeAnimation } from "react-type-animation";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/light-async";
+import CSharpCodeTypewriter from "./CSharpCodeTypeWriter";
 
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
 const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
@@ -36,22 +37,14 @@ export default function Home() {
     return (
         <>
           <div className="relative text-white p-20 flex flex-grow justify-between rounded-lg z-10">
-              <div className="bg-slate-900 p-5 rounded-lg z-20 w-[500px]">
-                  <p className="tex-6xl font-bold">
-                    <TypeAnimation
-                        style={{ whiteSpace: 'pre', display: 'block' }}                    sequence={[
-                        'using System;\n\n public class Program \n{\n\t public static void Main(String[] args)\n\t{\n\t\tConsole.WriteLine("Hello World!");\n\t}\n}',
-                      ]}
-                      wrapper="span"
-                      speed={50}
-                    />
-                  </p>
+              <div className="p-5 border border-customLightGray rounded-lg z-20 w-[2000px]">
+                  <CSharpCodeTypewriter/>
               </div>
 
               <div className="z-20">
                   <img src="resources/memoji_hello.png" alt="Memoji"/>
               </div>
-              <div className="bg-slate-900 p-10 rounded-lg">
+              <div className="border border-customLightGray p-10 rounded-lg">
                   <p className="font-semibold">
                       My Socials:
                   </p>
