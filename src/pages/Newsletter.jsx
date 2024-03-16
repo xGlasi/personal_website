@@ -25,7 +25,7 @@ export default function Newsletter() {
       return;
     }
 
-    const { d, e } = await supabase.functions.invoke('send-welcome-email', {
+    const { d, err } = await supabase.functions.invoke('send-welcome-email', {
       body: JSON.stringify({ email: emailAddress })
     });
   };
