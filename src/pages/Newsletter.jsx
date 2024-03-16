@@ -15,7 +15,7 @@ export default function Newsletter() {
     // Speichern der E-Mail in Supabase
     const { error } = await supabase
       .from('newsletter_subscribers')
-      .insert([{ emailAddress }]); // Die E-Mail-Adresse wird in der Tabelle gespeichert
+      .insert({ email: emailAddress }); // Die E-Mail-Adresse wird in der Tabelle gespeichert
 
     if (error) {
       alert('Es gab ein Problem beim Speichern Ihrer E-Mail. Bitte versuchen Sie es später erneut.');
