@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import { sendWelcomeEmail } from '';
-
 
 export default function Newsletter() {
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
