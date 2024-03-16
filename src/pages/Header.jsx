@@ -18,7 +18,7 @@ export default function Header() {
             <div className="space-x-5 border-10">
                 <Link to="/" className={getLinkClass('/')}>Home</Link>
                 <Link to="/blog" className={getLinkClass('/blog')}>Blog</Link>
-                <Link to="/newsletter" className={getLinkClass('/newsletter')}>Newsletter</Link>
+                <Link to="/Newsletter" className={getLinkClass('/newsletter')}>Newsletter</Link>
             </div>
         </header>
     )

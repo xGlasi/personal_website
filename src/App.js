@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx';
 import Blog from './pages/Blog.jsx'
 import Header from './pages/Header.jsx'
 import Footer from './pages/Footer.jsx'
+import Newsletter from './pages/Newsletter.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/Blog" element={<Blog/>}/>
+            <Route path="/Newsletter" element={<Newsletter/>}/>
           </Routes>
         </main>
 
