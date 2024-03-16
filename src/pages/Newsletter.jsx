@@ -22,10 +22,6 @@ export default function Newsletter() {
       console.error('Fehler beim Speichern in Supabase:', error);
       return;
     }
-
-    await supabase.functions.invoke('send-welcome-email', {
-      body: JSON.stringify({ email: emailAddress })
-    });
   };
 
   return (
