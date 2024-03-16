@@ -7,15 +7,15 @@ export default function Newsletter() {
   
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
   
-  const [email, setEmail] = useState('');
+  const [emailAddress, setEmail] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Speichern der E-Mail in Supabase
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('newsletter_subscriber')
-      .insert([{ email }]); // Die E-Mail-Adresse wird in der Tabelle gespeichert
+      .insert([{ emailAddress }]); // Die E-Mail-Adresse wird in der Tabelle gespeichert
 
     if (error) {
       alert('Es gab ein Problem beim Speichern Ihrer E-Mail. Bitte versuchen Sie es später erneut.');
@@ -23,7 +23,7 @@ export default function Newsletter() {
       return;
     }
 
-    const { d, err } = await supabase.functions.invoke('send-welcome-email', {
+    await supabase.functions.invoke('send-welcome-email', {
       body: JSON.stringify({ email: emailAddress })
     });
   };
@@ -33,7 +33,7 @@ export default function Newsletter() {
       <input
         type="email"
         placeholder="Ihre E-Mail Adresse"
-        value={email}
+        value={emailAddress}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
