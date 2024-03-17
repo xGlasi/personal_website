@@ -6,6 +6,9 @@ import Blog from './pages/Blog.jsx'
 import Header from './pages/Header.jsx'
 import Footer from './pages/Footer.jsx'
 import Newsletter from './pages/Newsletter.jsx';
+import Imprint from './pages/Imprint.jsx';
+import DataProtection from './pages/DataProtection.jsx';
+import Unsubcribe from './pages/Unsubscribe.jsx';
 
 function App() {
   return (
@@ -17,12 +20,14 @@ function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/Blog" element={<Blog/>}/>
             <Route path="/Newsletter" element={<Newsletter/>}/>
+            <Route path="/Imprint" element={<Imprint/>}/>
+            <Route path="/dataprotection" element={<DataProtection/>}/>
+            <Route path="/unsubscribe" element={<Unsubcribe/>}/>
           </Routes>
         </main>
         <Footer/>
       </div>
     </>
-
   );
 }
 

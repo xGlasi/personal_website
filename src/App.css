@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+/* Beispiel für globale Stile in globals.css */
+h2 {
+  @apply text-2xl font-bold my-4;
+}
+h3 {
+  @apply text-xl font-semibold my-3;
+}
+
+h4 {
+  @apply  text-lg p-2
+}

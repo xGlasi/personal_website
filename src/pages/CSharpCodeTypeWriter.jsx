@@ -1,6 +1,27 @@
 import Typewriter from 'typewriter-effect';
 import React from 'react';
 
+const isMobile = {
+  Android: function() {
+      return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function() {
+      return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function() {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function() {
+      return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function() {
+      return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+  },
+  any: function() {
+      return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+  }
+};
+
 const CSharpCodeTypewriter = () => {
   const part1 = `
     <span class="text-blue-600 font-semibold">using</span> System;<br><br>
@@ -13,12 +34,20 @@ const CSharpCodeTypewriter = () => {
   const deleteLength = "Andreas Glashauser".length;
 
   const part2 = `
-            <span class="text-orange-400 font-medium">a developer and now studying artificial intelligence. Feel</span><br>
+          <span class="text-orange-400 font-medium">a developer and now studying artificial intelligence. Feel</span><br>
          	<span class="text-orange-400 font-medium ml-12">free to check out my latest work on GitHub or catch </span><br>
          	<span class="text-orange-400 font-medium ml-12">up with my thoughts and discoveries on my blog.</span><br>
          	<span class="text-orange-400 font-medium ml-12">"""</span>);<p class="ml-4">}</p>
-            }
-            `;
+            }`;
+
+  const part2Mobile = `
+          <span class="text-orange-400 font-medium">a developer and now studying</span><br>
+          <span class="text-orange-400 font-medium ml-12">artificial intelligence. Feel free to check </span><br>
+          <span class="text-orange-400 font-medium ml-12">out my latest work on GitHub or catch up </span><br>
+          <span class="text-orange-400 font-medium ml-12">with my thoughts and discoveries on my</span><br>
+          <span class="text-orange-400 font-medium ml-12">blog.</span><br>
+          <span class="text-orange-400 font-medium ml-12">"""</span>);<p class="ml-4">}</p>
+            }`;
 
   return (
     <Typewriter
@@ -29,7 +58,7 @@ const CSharpCodeTypewriter = () => {
         .typeString(part1)
         .pauseFor(1000)
         .deleteChars(deleteLength) 
-        .typeString(part2)
+        .typeString(isMobile.any() ? part2Mobile : part2)
         .start();
       }}
       options={{

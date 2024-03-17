@@ -19,7 +19,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="mx-auto p-4 md:p-20" style={{ maxWidth: '60%' }}>
+    <div className="mx-auto p-4 md:p-20" style={{ maxWidth: '75%' }}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {posts.map((post) => (
           <BlogCard

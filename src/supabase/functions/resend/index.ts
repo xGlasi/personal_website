@@ -12,12 +12,13 @@ interface WebhookPayload {
 
 serve(async (req) => {
   const payload: WebhookPayload = await req.json();
-  console.log("Lade Paylod...")
+  console.log("Lade Payload...")
   console.log("Neuer User:")
   console.log(payload.record)
 
+  const unsubscribeLink = `https://andreasglashauser.netlify.app//unsubscribe?token=${payload.record?.uuid}`;
+
   console.log("JETZT GEHTS LOOOS");
-  console.log(Deno.env.get("RESEND_API_KEY"));
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -28,7 +29,7 @@ serve(async (req) => {
       from: 'Acme <onboarding@resend.dev>',      
       to: payload.record?.email,
       subject: "Welcome to the Club",
-      html: `Hey Andreas Glashauser we're glad to have you!`,
+      html: `Hey Andreas Glashauser we're glad to have you! <br><br> If you wish to unsubscribe, please <a href="${unsubscribeLink}">click here</a>.`,
     }),
   });
 

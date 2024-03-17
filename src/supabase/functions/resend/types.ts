@@ -13,14 +13,20 @@ export type Database = {
         Row: {
           email: string
           id: number
+          subscribed_since: string | null
+          uuid: string | null
         }
         Insert: {
           email: string
           id?: number
+          subscribed_since?: string | null
+          uuid?: string | null
         }
         Update: {
           email?: string
           id?: number
+          subscribed_since?: string | null
+          uuid?: string | null
         }
         Relationships: []
       }

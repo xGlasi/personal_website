@@ -32,6 +32,19 @@ class SupabaseService {
     }
     return { success: true };
   }
+
+  async unsubscribeToNewsletter(uuid) {
+    const { error } = await this.client
+    .from("newsletter_subscribers")
+    .delete()
+    .match({ uuid: uuid});
+
+    if (error) {
+      console.error('Fehler beim Speichern in Supabase:', error);
+      return { error };
+    }
+    return { success: true };
+  }
 }
 
 const supabaseService = new SupabaseService(supabaseUrl, supabaseAnonKey);
