@@ -12,7 +12,6 @@ function App() {
     <>
       <div className="bg-customDarkGray flex flex-col h-screen">
         <Header/>
-      
         <main className="flex-grow overflow-auto">
           <Routes>
             <Route path="/" element={<Home/>}/>
@@ -20,7 +19,6 @@ function App() {
             <Route path="/Newsletter" element={<Newsletter/>}/>
           </Routes>
         </main>
-
         <Footer/>
       </div>
     </>

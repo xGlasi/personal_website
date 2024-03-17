@@ -1,32 +1,24 @@
 import LatestBlogs from "./LatestBlogs";
 import React, { useState, useEffect } from 'react';
-import { createClient } from '@supabase/supabase-js';
 import CSharpCodeTypewriter from "./CSharpCodeTypeWriter";
+import supabaseService from '../services/supabaseClient';
 
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export default function Home() {
-    const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const { data, error } = await supabaseService.fetchPosts();
 
-    useEffect(() => {
-  
-      const fetchPosts = async () => {
-        const { data, error } = await supabase
-          .from('posts')
-          .select('*')
-          .order('published_at', { ascending: false }); 
-  
-        if (error) {
-          console.log('Fehler beim Abrufen der Posts:', error);
-        } else {
-          setPosts(data);
-        }
-      };
-  
-      fetchPosts();
-    }, []);
+      if (error) {
+        console.log('Fehler beim Abrufen der Posts:', error);
+      } else {
+        setPosts(data);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
 
     return (
         <>
