@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const Alert = ({ title, message }) => {
+const Alert = ({ title, message, onClose }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onClose();
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, [onClose]);
+
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-xl p-4 bg-green-100 border border-green-400 text-green-700 rounded shadow-lg mt-4 flex justify-between items-start z-50">
       <div className="flex space-x-2">
