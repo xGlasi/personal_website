@@ -4,6 +4,7 @@ import supabaseService from "../services/supabaseClient";
 
 export default function Subscribe() {
   const [searchParams] = useSearchParams();
+  const [showAlert, setShowAlert] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -14,9 +15,16 @@ export default function Subscribe() {
     })();
   }, [searchParams]);
 
+
   return (
-    <div className="flex flex-col justify-center items-center h-screen text-white text-center">
-      <p class="text-xl font-bold">Welcome!.</p>
-    </div>
+    <>
+    {showAlert && (
+        <Alert
+          message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto, ipsam similique veniam."
+          onDismiss={() => setShowAlert(false)}
+        />
+      )}
+        <Home></Home>
+    </>
   );
 }
