@@ -12,10 +12,9 @@ export default function Newsletter() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Speichern der E-Mail in Supabase
     const { error } = await supabase
       .from('newsletter_subscribers')
-      .insert({ email: emailAddress }); // Die E-Mail-Adresse wird in der Tabelle gespeichert
+      .insert({ email: emailAddress }); 
 
     if (error) {
       alert('Es gab ein Problem beim Speichern Ihrer E-Mail. Bitte versuchen Sie es später erneut.');
@@ -25,15 +24,29 @@ export default function Newsletter() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="email"
-        placeholder="Ihre E-Mail Adresse"
-        value={emailAddress}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <button type="submit">Anmelden</button>
-    </form>
+    <div class="h-screen flex flex-col items-center justify-center rounded-md border border-customLightGray">
+      <div class="text-center">
+        <p className="text-white font-bold text-5xl mb-1">
+          Transform Your Tomorrow
+        </p>
+        <p class="text-white text-xl mb-4">
+        Subscribe to the newsletter to stay up to date with the newest trends!
+        </p>
+      </div>      
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          placeholder="Your email address"
+          value={emailAddress}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          class="p-3 rounded-md pl-20"
+        />
+        <button t
+        ype="submit"
+        class="bg-customBlue text-white p-3 rounded-md ml-5"
+        >Subscribe</button>
+      </form>
+    </div>
   );
 };
