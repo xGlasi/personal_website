@@ -9,6 +9,7 @@ import Newsletter from './pages/Newsletter.jsx';
 import Imprint from './pages/Imprint.jsx';
 import DataProtection from './pages/DataProtection.jsx';
 import Unsubcribe from './pages/Unsubscribe.jsx';
+import Subscribe from './pages/Subscribe.jsx';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/Imprint" element={<Imprint/>}/>
             <Route path="/dataprotection" element={<DataProtection/>}/>
             <Route path="/unsubscribe" element={<Unsubcribe/>}/>
+            <Route path="/subscribe" element={<Subscribe/>}/>
           </Routes>
         </main>
         <Footer/>

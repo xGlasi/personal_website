@@ -11,18 +11,21 @@ export type Database = {
     Tables: {
       newsletter_subscribers: {
         Row: {
+          confirmed_subscription: boolean
           email: string
           id: number
           subscribed_since: string | null
           uuid: string | null
         }
         Insert: {
+          confirmed_subscription?: boolean
           email: string
           id?: number
           subscribed_since?: string | null
           uuid?: string | null
         }
         Update: {
+          confirmed_subscription?: boolean
           email?: string
           id?: number
           subscribed_since?: string | null

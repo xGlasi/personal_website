@@ -45,6 +45,18 @@ class SupabaseService {
     }
     return { success: true };
   }
+
+  async confirmSubscriptionToNewsletter(uuid) {
+    const { error } = await this.client
+    .from("newsletter_subscribers")
+    .update({ confirmed_subscription: true })
+    .match({ uuid }); 
+
+    if (error) {
+      console.error('Fehler beim Aktualisieren der Bestätigung:', error);
+      return { error };
+    }
+  }
 }
 
 const supabaseService = new SupabaseService(supabaseUrl, supabaseAnonKey);
