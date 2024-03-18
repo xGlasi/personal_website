@@ -64,6 +64,11 @@ class SupabaseService {
     .invoke('Send Welcome Email', {
       body: { uuid: uuid}
     })
+
+    if (error) {
+      console.error('Fehler beim Aktualisieren der Bestätigung:', error);
+      return { error };
+    }
   }
 }
 

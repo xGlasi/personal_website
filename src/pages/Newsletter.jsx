@@ -54,7 +54,7 @@ export default function Newsletter() {
               value={emailAddress}
               onChange={(e) => setEmail(e.target.value)}
               required
-              class="p-3 rounded-md pl-20"
+              class="p-3 rounded-md w-96 text-center"
             />
             <button t
             ype="submit"
