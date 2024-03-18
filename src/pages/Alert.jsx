@@ -34,7 +34,6 @@ const Alert = ({ title, message }) => {
             <p className="text-sm">{message}</p>
           </div>
         </div>
-        {/* Schließkreuz Button */}
         <button
           onClick={handleClose}
           className="text-green-700 hover:text-green-900 rounded-full text-sm p-1 focus:outline-none"

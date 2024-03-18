@@ -12,8 +12,9 @@ interface WebhookPayload {
 
 serve(async (req) => {
   const payload: WebhookPayload = await req.json();
-  const subscribeLink = `https://andreasglashauser.netlify.app/subscribe?token=${payload.record?.uuid}`;
+  const unsubscribeLink = `https://andreasglashauser.netlify.app/unsubscribe?token=${payload.record?.uuid}`;
 
+  console.log("JETZT GEHTS LOOOS");
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -25,14 +26,14 @@ serve(async (req) => {
       to: payload.record?.email,
       subject: "Newsletter subscription",
       html: `
-      Hey, <br/><br/>
-      Please confirm your newsletter subscription by clicking <a href="${subscribeLink}">here</a>.<br/><br/>
-      See you!<br/>
+      Hey, <br/>
+      You are now successful! <br/><br/>
+      You have now been successfully subscribed to the newsletter. You can cancel your subscription by clicking<a href="${unsubscribeLink}">here</a>.<br/><br/>
+      Have fun reading!<br/>
       Andreas Glashauser
       `,
     }),
   });
-
 
   return new Response("ok");
 });
