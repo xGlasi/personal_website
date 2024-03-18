@@ -3,14 +3,10 @@ const path = require('path');
 const asciidoctor = require('asciidoctor')();
 const { createClient } = require('@supabase/supabase-js');
 
-// Ersetze 'deine_supabase_url' und 'dein_angehefteter_api_key' durch deine Supabase Projektangaben
-const supabaseUrl = "https://gfecmvynsdgucmrxtexf.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmZWNtdnluc2RndWNtcnh0ZXhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk5MzQwMzUsImV4cCI6MjAyNTUxMDAzNX0.68rY1zhehU4gf6Nqwys6kkQLgUiGOeZ5ZH5binfjkzo";
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
 
 const BLOG_DIR = './public/blog';
 
-// Eine Funktion, um Metadaten aus dem ASCIIdoc-Inhalt zu extrahieren
 function extractMetadata(content) {
   const metadata = {};
   const lines = content.split('\n');
@@ -23,7 +19,6 @@ function extractMetadata(content) {
   return metadata;
 }
 
-// Eine Funktion, um Blog-Posts zu Supabase zu pushen
 async function pushToSupabase(metadata, htmlContent) {
   const { data, error } = await supabase
     .from('posts')
@@ -48,7 +43,6 @@ async function pushToSupabase(metadata, htmlContent) {
   }
 }
 
-// Hauptfunktion zum Verarbeiten der ASCIIdoc-Dateien und Hochladen der Posts
 async function processAndUploadPosts() {
   const files = fs.readdirSync(BLOG_DIR);
 
@@ -67,7 +61,6 @@ async function processAndUploadPosts() {
   }
 }
 
-// Ausführen der Hauptfunktion
 processAndUploadPosts().then(() => {
   console.log('Alle Posts wurden verarbeitet.');
 });
