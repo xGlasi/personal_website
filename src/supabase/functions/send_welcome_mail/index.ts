@@ -28,9 +28,8 @@ serve(async (req) => {
       to: payload.record?.email,
       subject: "Newsletter subscription",
       html: `
-      Hey, <br/>
-      You are now successful! <br/><br/>
-      You have now been successfully subscribed to the newsletter. You can cancel your subscription by clicking<a href="${unsubscribeLink}">here</a>.<br/><br/>
+      Hey, <br/><br/>
+      You have now been successfully subscribed to the newsletter. You can cancel your subscription by clicking <a href="${unsubscribeLink}">here</a>.<br/><br/>
       Have fun reading!<br/>
       Andreas Glashauser
       `,
