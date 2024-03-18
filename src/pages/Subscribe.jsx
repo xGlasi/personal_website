@@ -23,7 +23,7 @@ export default function Subscribe() {
     {showAlert && (
         <Alert
         title="Success!"
-          message="Congratulations! Newsletter subscription has been successfully completed."
+          message="Congratulations! Your newsletter subscription has been successfully completed."
           onDismiss={() => setShowAlert(false)}
         />
       )}
