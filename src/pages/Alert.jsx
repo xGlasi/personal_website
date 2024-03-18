@@ -18,10 +18,9 @@ const Alert = ({ title, message }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="relative fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-xl p-4 bg-green-100 border border-green-400 text-green-700 rounded shadow-lg mt-4 z-50">
+    <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-xl p-4 bg-green-100 border border-green-400 text-green-700 rounded shadow-lg mt-4 z-50">
       <div className="flex justify-between items-start">
         <div className="flex space-x-2">
-          {/* Icon und Nachricht hier */}
           <svg
             className="fill-current w-6 h-6 mr-2"
             xmlns="http://www.w3.org/2000/svg"
