@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import supabaseService from "../services/supabaseClient";
 import Home from "./Home";
-import Alert from "./Alert";
+import Alert from "../components/Alert";
 
 export default function Subscribe() {
   const [searchParams] = useSearchParams();

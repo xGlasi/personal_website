@@ -1,8 +1,8 @@
-import LatestBlogs from "./LatestBlogs";
+import LatestBlogs from "../components/LatestBlogs";
 import React, { useState, useEffect } from 'react';
-import CSharpCodeTypewriter from "./CSharpCodeTypeWriter";
+import CSharpCodeTypewriter from "../components/CSharpCodeTypeWriter";
 import supabaseService from '../services/supabaseClient';
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "../components/SocialMedia";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);

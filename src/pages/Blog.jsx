@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import supabaseService from '../services/supabaseClient';
-import BlogCard from './BlogCard'; 
+import BlogCard from '../components/BlogCard'; 
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
