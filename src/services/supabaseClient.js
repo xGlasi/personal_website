@@ -57,6 +57,14 @@ class SupabaseService {
       return { error };
     }
   }
+
+  async sendWelcomeEmail(uuid) {
+    const { error } = await this.client
+    .functions
+    .invoke('Send Welcome Email', {
+      body: { uuid: uuid}
+    })
+  }
 }
 
 const supabaseService = new SupabaseService(supabaseUrl, supabaseAnonKey);

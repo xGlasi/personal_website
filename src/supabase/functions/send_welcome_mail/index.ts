@@ -12,6 +12,8 @@ interface WebhookPayload {
 
 serve(async (req) => {
   const payload: WebhookPayload = await req.json();
+  console.log("Payload:")
+  console.log(payload.record)
   const unsubscribeLink = `https://andreasglashauser.netlify.app/unsubscribe?token=${payload.record?.uuid}`;
 
   console.log("JETZT GEHTS LOOOS");
