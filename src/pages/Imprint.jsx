@@ -6,7 +6,7 @@ export default function Imprint() {
                 Akazienring, 43<br />
                 94522 Wallersdorf</p><br/>
                 <h2 class="font-bold">Contact</h2>
-                <p>E-Mail: a.andreasglashauser@gmail.com</p>
+                <p>E-Mail: blog@andreasglashauser.com</p>
             </div>
     )
 }
