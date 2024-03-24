@@ -38,7 +38,7 @@ export default function Newsletter() {
     );
   } else {
       return (
-        <div class="h-screen flex flex-col items-center justify-center rounded-md border border-customLightGray">
+        <div class="h-screen flex flex-col items-center content-center text-center justify-center rounded-md border border-customLightGray">
           <div class="text-center">
             <p className="text-white font-bold text-5xl mb-1">
               Transform Your Tomorrow
@@ -46,7 +46,7 @@ export default function Newsletter() {
             <p class="text-white text-xl mb-4">
             Subscribe to the newsletter to be notified when a new blog post is published
             </p>
-          </div>      
+          </div>  
           <form onSubmit={handleSubmit}>
             <input
               type="email"
@@ -58,7 +58,7 @@ export default function Newsletter() {
             />
             <button t
             ype="submit"
-            class="bg-customBlue text-white p-3 rounded-md ml-5"
+            class="bg-customBlue text-white p-3 m-1 rounded-md ml-5"
             >Subscribe</button>
           </form>
           <p class="text-gray-400 text-sm p-5">
