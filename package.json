@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@tsparticles/react": "^3.0.0",
     "asciidoctor": "^3.0.4",
-    "deno": "^0.1.1",
     "dotenv": "^16.4.5",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
