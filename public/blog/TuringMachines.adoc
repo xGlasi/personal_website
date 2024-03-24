@@ -1,0 +1,47 @@
+:title: Turing Machines
+:excerpt: A brief introduction into one of the most important concepts of computer science.
+:tags: history
+:cover_image_url: ./resources/image.webp
+:slug: turing turingmachines
+
+### Einleitung
+Turing's Paper "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf" ist wohl eines der einflussreichsten Paper der Informatik jemals. Das Konzept der Turing-Maschine, das er im Paper behandelt, hat extrem viele Auswirkungen von auf die theoretische Informatik: Die Frage der Berechenbarkeit, "Turing"-Complete und viel mehr.
+
+Aber was ist eigentlich eine Turing Maschine? Wie funktioniert sie?
+
+### Historisches Kontext
+Am Anfang des 20. Jahrhunderts übernahmen Maschinen bereits viele körperliche Aufgaben von Menschen. Bereits zu dieser Zeit leisteten die durch Stecktafeln programmierte Buchhaltungsmaschinen von IBM beeindruckende Arbeit, indem sie Berechnungen durchführten und Zwischenergebnisse speicherten, um auf diesen aufzubauen.
+
+Doch die Maschinen hatten ein Problem: Sie waren extrem unflexibel. Ausgelöst durch dieses Problem stellten sich Wissenschaftler die Frage, wie man den Prozess der Automatisierung von geistiger Arbeit vorantreiben könnte - könnte man vielleicht sogar eine Maschine erschaffen, die nicht nur rechnen, sondern auch "denken" kann?
+
+Die Herausforderung, die der Mathematiker Hilbert der akademischen Gemeinschaft stellte, darunter die Frage, ob Maschinen existieren könnten, die mathematische Aussagen als wahr oder falsch identifizieren könnten, spitzten diese Überlegungen zu. Dieses Konzept einer "Denkmaschine" war faszinierend, es blieb jedoch eine unergründete Frontier. Es war in diesem Kontext, als Alan Turing in seinem Paper die Grundlage für das legte, was wir heute als Turing-Maschine kennen.
+
+### Von der Theorie zur Praxis: Die Einführung der Turing-Maschine
+
+Turing griff diese grundlegenden Fragen auf und schlug mit seiner Arbeit ein universelles Modell vor, das die Grenzen und Möglichkeiten der Berechnung definiert. Die Turing-Maschine, eine abstrakte Rechenmaschine, war dabei mehr als nur eine Antwort auf Hilberts Probleme; sie war ein Paradigmenwechsel, der das Fundament der modernen Informatik legen sollte. Turing demonstrierte, dass eine solche Maschine in der Lage sein könnte, jede berechenbare Funktion auszuführen, vorausgesetzt, sie ist durch einen Algorithmus darstellbar. Damit löste er nicht nur das Problem der Unflexibilität bisheriger Maschinen, sondern öffnete auch das Tor zur theoretischen Möglichkeit von Maschinen, die "denken" können.
+
+Die Einführung der Turing-Maschine brachte Licht in das Dunkel der Berechenbarkeit und legte die Basis für das Verständnis dessen, was es bedeutet, wenn wir sagen, dass etwas durch einen Computer berechnet werden kann. Mit seiner Arbeit setzte Turing den Grundstein für die Entwicklung der Computerwissenschaft und ebnete den Weg für die digitale Revolution, die folgen sollte. Im nächsten Abschnitt werden wir tiefer in die spezifischen Probleme eintauchen, die Turing-Maschinen lösen, und wie sie das Verständnis von Berechenbarkeit und Algorithmik bis heute prägen.
+
+### Introduction
+Turing Machines sind ein grundlegendes Konzetp in der Theoretischen Informatik und bilden ein Modell für Berechenbarkeit und Komplexitätstheorie. Sie wurden von Alan Turing 1936 in seinem Paper eingeführt, um das Entscheidungsproblem in der Mathematik zu adressieren. Es adressiert folgende Probleme:
+- Was bedeutet es, dass eine Funktion oder ein Problem berechenbar ist?
+Turing-Maschinen bieten ein präzises Modell dafür, was es bedeutet, wenn gesagt wird, dass eine Funktion druch einen Algorithmus berechenbar ist. Wenn eine Funktion durh eine Turing-Maschine berechnet werden kann, gilt sie als berechenbar.
+
+- Grenzen der Berechenbarkeit
+Gleichzeitig helfen Turing-Maschinen dabei, die Grenzen dessen zu erkunden, was Algorithmen leisten könnten. Ein berühmtes Ergebnis in diesem Zusammenhang ist das Halteproblem, das beweist, dass es keine allgemeine LÖsung gibt, um zu bestimmen, ob eine beliebige Turing_Maschine für eine gegebene Eingabe anhält oder nicht. Dies zeigt die inhärenten Grenzen dessen, was durch Algorithmen entschieden werden kann
+
+
+- Vergleich verschiedener Berechnungsmodelle
+Durch Turing-Maschinen kann gezeigt werden, dass verschiedene Berechnungsmodelle äquivalent in ihrer Fähigkeit sind, Probleme zu lösen. Die Church-Turing-These postuliert, dass jede Funktion, die natürlich berechenbar ist, durch eine Turing-Maschine berechnet werden kann. 
+
+- Grundlage der Komplexitätstheorie
+Turing-maschinen dienen als Grundlage für die Komplexitätstheorie, die sich mit der KLassifizierung von Problemen basierend auf dem Ressourcenbedarf (wie Zeit und Speicher) für ihre Lösung befasst. Komplexitätsklassen wie P, NP und andere sind in Bezug auf Turing-Maschinen definiert.
+
+
+### Wie funktioniert es eigentlich?
+
+
+
+
+
+

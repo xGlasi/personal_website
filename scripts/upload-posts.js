@@ -27,7 +27,6 @@ async function pushToSupabase(metadata, htmlContent) {
         title: metadata.title,
         excerpt: metadata.excerpt,
         content: htmlContent,
-        published_at: metadata.published_at,
         tags: metadata.tags.split(','),
         cover_image_url: metadata.cover_image_url,
         slug: metadata.slug,
