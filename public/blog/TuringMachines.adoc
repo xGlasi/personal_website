@@ -7,7 +7,7 @@
 ### Einleitung
 Turing's Paper "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf" ist wohl eines der einflussreichsten Paper der Informatik jemals. Das Konzept der Turing-Maschine, das er im Paper behandelt, hat extrem viele Auswirkungen von auf die theoretische Informatik: Die Frage der Berechenbarkeit, "Turing"-Complete und viel mehr.
 
-Aber was ist eigentlich eine Turing Maschine? Wie funktioniert sie?
+Aber was ist eigentlich eine Turing Maschine? Wie funktioniert sie wirklich?
 
 ### Historisches Kontext
 Am Anfang des 20. Jahrhunderts übernahmen Maschinen bereits viele körperliche Aufgaben von Menschen. Bereits zu dieser Zeit leisteten die durch Stecktafeln programmierte Buchhaltungsmaschinen von IBM beeindruckende Arbeit, indem sie Berechnungen durchführten und Zwischenergebnisse speicherten, um auf diesen aufzubauen.
