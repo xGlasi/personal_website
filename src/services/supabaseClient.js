@@ -47,10 +47,12 @@ class SupabaseService {
   }
 
   async confirmSubscriptionToNewsletter(uuid) {
+    console.log(uuid)
     const { error } = await this.client
     .from("newsletter_subscribers")
     .update({ confirmed_subscription: true })
     .match({ uuid }); 
+    console.log("Jetzt hier")
 
     if (error) {
       console.error('Fehler beim Aktualisieren der Bestätigung:', error);
