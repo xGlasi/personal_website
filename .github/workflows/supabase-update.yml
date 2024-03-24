@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'public/blog/**'
+    paths-ignore:
+      - 'src/supabase/**'
 
 jobs:
   update-supabase:
