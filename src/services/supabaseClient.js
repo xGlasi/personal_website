@@ -1,8 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
-
 class SupabaseService {
   constructor(url, key) {
     this.client = createClient(url, key);
@@ -88,6 +85,7 @@ class SupabaseService {
   }
 }
 
-const supabaseService = new SupabaseService(supabaseUrl, supabaseAnonKey);
+const supabaseService = new SupabaseService(process.env.REACT_APP_SUPABASE_URL, 
+  process.env.REACT_APP_SUPABASE_ANON_KEY);
 
 export default supabaseService;
