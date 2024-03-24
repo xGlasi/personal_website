@@ -21,6 +21,20 @@ class SupabaseService {
     return { data };
   }
 
+  async fetchPostByUrl(url) {
+    const { data, error } = await this.client
+      .from('posts')
+      .select('*')
+      .match({url: url})
+      .single();
+
+      if (error) {
+        console.error('Fehler beim Abrufen der Posts:', error);
+        return { error };
+      }
+      return { data };
+  }
+
   async subscribeToNewsletter(emailAddress) {
     const { error } = await this.client
       .from('newsletter_subscribers')

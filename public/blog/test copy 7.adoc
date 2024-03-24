@@ -1,6 +1,0 @@
-:title: Test-Titelasdf7
-:excerpt: Zusammenfassungasdf.7
-:tags: TestTagasdf7
-:cover_image_url: ./resources/image.webp
-:published_at: 2021-01-01
-:slug: test-slugasdf testasdfasdfasdf7

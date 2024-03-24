@@ -11,6 +11,7 @@ export default function LatestBlogs({ posts }) {
                 {posts.slice(0, 3).map((post) => (
                     <div key={post.id}>
                         <BlogCard
+                            url={post.url}
                             title={post.title}
                             excerpt={post.excerpt}
                             imageUrl={post.cover_image_url}
