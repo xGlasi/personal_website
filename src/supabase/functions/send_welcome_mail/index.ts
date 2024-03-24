@@ -4,7 +4,8 @@ import { Database } from "./types.ts";
 type NewsletterRecord = Database["public"]["Tables"]["newsletter_subscribers"]["Row"]
 interface WebhookPayload {
   type: "INSERT" | "UPDATE" | "DELETE";
-  table: string;
+  table:
+  string;
   record: null | NewsletterRecord;
   schema: "public";
   old_record: null | NewsletterRecord;
