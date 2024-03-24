@@ -2,7 +2,7 @@
 :excerpt: A brief introduction into one of the most important concepts of computer science.
 :tags: history
 :cover_image_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Turing_Machine_Model_Davey_2012.jpg
-:slug: turing turingmachines
+:slug: turing turingmachine
 
 ### Einleitung
 Turing's Paper "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf" ist wohl eines der einflussreichsten Paper der Informatik jemals. Das Konzept der Turing-Maschine, das er im Paper behandelt, hat extrem viele Auswirkungen von auf die theoretische Informatik: Die Frage der Berechenbarkeit, "Turing"-Complete und viel mehr.
