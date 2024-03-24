@@ -3,7 +3,7 @@ const path = require('path');
 const asciidoctor = require('asciidoctor')();
 const { createClient } = require('@supabase/supabase-js');
 
-const supabase = createClient(secrets.env.SUPABASE_URL, secrets.env.SUPABASE_ANON_KEY);
+const supabase = createClient(process.env.secrets.SUPABASE_URL, secrets.env.secrets.SUPABASE_ANON_KEY);
 
 console.log("0:" + secrets)
 console.log("1: " + env.secrets)
