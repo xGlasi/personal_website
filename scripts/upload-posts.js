@@ -3,7 +3,10 @@ const path = require('path');
 const asciidoctor = require('asciidoctor')();
 const { createClient } = require('@supabase/supabase-js');
 
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
+const supabase = createClient(secrets.env.SUPABASE_URL, secrets.env.SUPABASE_ANON_KEY);
+
+console.log("0:" + secrets)
+console.log("1: " + env.secrets)
 
 const BLOG_DIR = './public/blog';
 
