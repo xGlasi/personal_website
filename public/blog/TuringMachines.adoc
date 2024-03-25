@@ -9,77 +9,91 @@
 
 
 ## Einführung
+Das Jahr 1936. Der britische Mathematiker Alan Turing brachte eine Idee hervor, die nicht nur das Verständnis der mathematischen Berechenbarkeit revolutionieren sollte, sondern auch einen entscheidenende Wendepunkt in der Geschichte der Computertechnologie markierte. Diese Idee, die Turing-Maschine, war Turings Antwort auf das Hilbertprogramm - eine Herausforderung, die vom deutschen Mathematiker David Hilbert in den 1920er Jahren formuliert wurde. Das Programm hatte das Ziel, alle mathematischen Aussagen durch ein festgelegtes System von Axiomen und Regeln vollständig und widerspruchsfrei zu beweisen, mit dem Ziel, die Grundfesten der Mathematik zu stärken.
 
+Vor der Veröffentlichung von Turing's Maschine waren die existierenden REchnermaschine, wie die Buchhaltungsmaschinen von IBM, auf speziefische, sehr eng definierte Aufgaben beschränkt. Selbst die etwas flexibleren Maschinen, die durch Stecktafeln programmiert wurdne, konnten nicht ide Universalität und theoretische Tragweite erreichen, die Turing mit seiner abstrakten Maschine vor Augen hatte. Turing's Maschine unterschied sich grundlegend von diesen Machinen - sie war theoretisch in der Lage, jedes Problem zu lösen, das matehmatisch formuliert werden kann, sofern genügend Zeit und Speicherplatz zur Verfügung stehen.
 
-Das Jahr 1936. Der Mathematiker David Hilbert hatte mit dem Jahr 1920 formulierten Hilbertprogramm das ehrgeizige Ziel, alle mathematischen Aussagen durch ein festgelegtes System von Axiomen und Regeln vollständig und widerspruchsfrei zu beweisen. 
+Durch die Definition dieser einfachen, aber ungemein mächstens Modells, lieferte Turing nicht nur den theoreitschen Unterbau für den ersten Universalcomputer, sondern stelle auch das Hilbertprogramm in Frage. Turings FOrschung offenbarte, dass es bestimmte mathemtische PRobleme gibt, die prinzipiell unlösbar sind, was der Annahme des Hilbertprogramms widersprache, dass es möglich sei, ein vollständiges und konsistentes System von Axiomen für die gesamte Mathematik zu etablieren. Insbesondere das von ihm vorgestellte Halteproblem demonstriert, dass kein algorithmisches Verfahren existieren kan, das für jede denkbare Eingabe entscheidet, ob eine Turing-Maschine anhalten wird oder nicht.
 
-Im Rahmen dieses Forschungsprogrammes stellt der weltberühmte Alan Turing viele Jahre, bevor es überhaupt den ersten Computer gibt, sein mathmatisches Modell der Turing-Maschine vor, das eine abstrakte Maschine definiert, das viele Probleme löst.
+Diese Erkenntnis hatte weitreichende FOlgen für die Mathematik und legte den Grundstein für die Informatik als eigendständige Disziplin. Die Implikationen von Turings Arbeit reichen bis in die heutige Zeit, in er die Prinzipien der Turing-Maschine in jedem Computer, jedem Smartphone und in der Softaare, die unsere digitale Welt antreibt, widerhallen.
 
-Bis zur Veröffentlichung der Turing-Maschine gab es nur Maschinen, die auf eng definierte Aufbauen ausgelegt wurden, so z.B. die Buchhaltungsmaschinen von IBM und bereits ein wenig mehr flexiblere Maschinen, die mit Stecktafeln programmiert wurden.
+## Die Grundlagen der Turing-Maschine
 
+Alan Turing stellte sich in seinem bahnbrechenden Paper eine Maschine vor, die heutzutage als Turing-Maschine bekannt ist. Diese Vorstellung basierte auf der Idee eines Menschen in einem Kasten, der mit einem Bleistift und einem Stapel Papier ausgestattet ist, zusammen mit einem Buch voller Anweisungen. Die zentrale Einsicht Turings bestand darin, Verhalten durch Symbole zu definieren und zu steuern, anstatt auf physische Mechanismen zu setzen.
+Wie funktioniert eine Turing-Maschine?
 
-Dieser Blog soll einen kleinen Einblick geben in die umfangreiche und Komplexe Thematik der Turing-Maschinen. Bereits über die Geschichte dahinter würde sich ein Buch schreiben lassen, aber ich versuche im Folgenden den Lesern ein Verständnis in die Turing-Maschinen zu geben und zu zeigen, wie diese Maschinen noch heute Einfluss auf die Informatik haben.
+Turings Konzept sah vor, dass das Verhalten der Maschine (oder des Menschen im Kasten) durch die Anweisungen im Buch bestimmt wird. Jede Seite des Buches entspricht einer Entscheidung, basierend auf einer bedingten Anweisung ("Wenn-Dann"). Die Person im Kasten nimmt ein Symbol wahr (der "Wenn"-Teil), welches durch die Position ihres Bleistifts auf dem Papier bestimmt wird. Dieses Symbol vergleicht sie mit einer Liste möglicher Symbole, die in der Anleitung aufgeführt sind, um eine Übereinstimmung zu finden. Sobald eine Übereinstimmung gefunden ist, folgt der Operationsschritt (der "Dann"-Teil), bei dem neue Symbole aufgeschrieben oder die Aufmerksamkeit auf eine neue Stelle gelenkt wird. Die Anweisungen bestimmen somit die Aktionen und den nächsten Zustand der Maschine.
+Das Entscheidungsproblem und die Turing-Maschine
 
+Ein zentraler Aspekt von Turings Arbeit war die Adressierung des Entscheidungsproblems (Entscheidungsproblem), das fragt, ob es ein allgemeines Verfahren gibt, mit dem für jede mathematische Aussage entschieden werden kann, ob sie wahr oder falsch ist. Turing demonstrierte, dass seine Maschine prinzipiell jedes berechenbare Problem lösen kann, doch durch das Aufzeigen des Halteproblems bewies er auch, dass es Probleme gibt, die grundsätzlich nicht entscheidbar sind – ein direkter Widerspruch zum Ziel des Hilbertprogramms.
+Die "echte" Hardware der ursprünglichen Turing-Maschine
 
+Obwohl Turing seine Maschine als rein abstraktes Konzept vorstellte, kann man sich die "Hardware" einer solchen Maschine als unendlich langes Band vorstellen, auf dem Symbole gespeichert werden. Eine Lese-/Schreibkopf bewegt sich entlang dieses Bandes, liest Symbole, schreibt neue Symbole basierend auf den Regeln des "Anweisungsbuches" und ändert seinen Zustand entsprechend. Diese Simplizität und Flexibilität machten die Turing-Maschine zu einem mächtigen Modell für die theoretische Informatik, weit über die mechanischen Einschränkungen realer Maschinen hinaus.
 
-- Kurz Einführung in Alan Turing und die Historie der Turing-Maschine
-- Überblick über die Inhalte des Blogs und was den Leser erwartet.
-
-## Grundlagen der Turing Maschinen
-
-Gut, was ist aber jetzt eine Turing-Maschine & wie funktioniert sie?
-
-In seinem Paper beginnt er, sich eine Maschine als einem Menschen in einem Kasten vorzustellen, mit einem Bleistift und einem Stapel Papier, und ihm wird ein Buch mit Anweisungen zum Befolgen übergeben. Um also zu ändern, was dieser Mensch tut, muss man die Anweisungen in dem Buch verändern - das ist die erste tiefe Einsicht, die Alan Turing hatte: Verhalten mit Symbolen statt mit Mechanismen zu definieren.
-
-Das war zu seiner Zeit bereits ein sehr cleverer Trick. Daher verbringt er die ersten 60% seines Papers damit, zu erklären, wie es funktionieren würde und welche Form diese schriftliche Anweisungen oder Algirhtmen men annehmen würden, wie folgt:
-
-Stellen Sie sich jede Seite in diesem Buch der Anweisungen als eine einzelne Entscheidung vor. Zuerst kommt eine Beobachtung, die der "Wenn"-Teil der bedingten Aussage ist, und was die Person beobachtet, ist genau, wo ihr Bleistift im Entwurf hinzeigt. In unserem Beispiel ist es das erste Symbol der Eingabe. Er nennt das ihr Bewusstsein, sodass sie immer nur eines Symbols bewusst ist.
-
-Als Nächsten schauen Sie in ihre Anweisungen und vergleichen das Symbol in ihrem Bewusstsein mit einer Liste von Möglichkeiten in der ersten Spalte, um eine Übereinstimmung zu finden. Sobald eine Übereinstimmung gefunden ist, gehen Sie zum zweiten Schritt der bedingten Aussage über: der Operationsschritt.
-Turing stellt fest, dass unabhängig von der Anweisung oder in welcher Sprache Sie sind, sie immer nur Symbole auf dem Papier aufschreiben und/oder ihre Aufmerksamkeit auf einen neue Ort verschieben werden.
-Daher listet die letzte Spalte in der Tabelle, genannt "Nächster Zustand", die nächste Seite auf, zu der gesprungen werden soll.
-
-In dieser Buchanalogie ist jede Seite im Buch ein neuer Schritt. Turing nennt diese Schritte Zustände der Maschine. Wenn der nächste Zustand erreicht ist, wird ihr aktuelles Bewusstsein, wo der Stift gerade hinzeigt, erneut beobachtet, und dann scannen sie, um auf die gleiche Weise eine Übereinstimmung zu finden. Sobald Sie das tun, folgenden Sie der Sequenz und springen dann zum nächsten Zustand. Und dieser Prozess setzt sich Zustand für Zustand fort. So ist der Prozess der Berechnung genau wie das Umblättern von Seiten in einem Buch, und auf jeder Seite wird eine Entscheidung darüber getroffen, was als Nächsten zu tun ist, basierend darauf, wo der Bleistift auf eine separate Seite hinzeigt. 
-Beachten Sie, dass dieses Buch nicht in derselbw3e
-
-
-    - Definition und technische Beschreibung
-    - Komponenten einer Turing-Maschine (Band, Lese-/Schreibkopf, Zustände)
-    - Wie Turing-Maschinen funktionieren (mit einem einfachen Beispiel)
+Turing nutzte diese einfache, aber mächtige Analogie, um die Grundlagen für moderne Berechnung und Programmierung zu legen. Die Art und Weise, wie eine Turing-Maschine Operationen durchführt, ähnelt dem Durchblättern eines Buches, in dem jede Seite eine neue Entscheidung ermöglicht, basierend darauf, wo der "Bleistift" gerade hinweist. Dies ist kein linearer Prozess, sondern eher ein "Wähle dein eigenes Abenteuer", bei dem die Reihenfolge der durchlaufenen Zustände von der Eingabe abhängt. Letztendlich kann die Maschine zu einem Endzustand gelangen, in dem sie eine Lösung für das gegebene Problem bietet und stoppt, um das Ergebnis auszugeben.
 
 ## Theoretische Grundlagen und Bedeutung
 
-    - Unentscheidbarkeitsprobleme: Das Halteproblem und seine Bedeutung für die Berechenbarkeitstheorie.
-    - Die Church-Turing-These: Erklärung und Bedeutung für die Informatik und Künstliche Intelligenz.
-    - Universalität der Turing-Maschine und die Idee des Turing-vollständigen Systems.
+Die Church-Turing-These besagt, dass jede Berechnung in der realen Welt in eine äquivalente Berechnung überführt werden kann, die eine Turing-Maschine involviert. In Churchs ursprünglicher Formulierung besagt die These, dass jede Berechnung in der realen Welt mit dem Lambda-Kalkül durchgeführt werden kann, was dem Äquivalent zu allgemein rekursiven Funktionen entspricht.
+
+Mittlerweile umfasst die Church-Turing-These mehr Arten von Berechnungen als ursprünglich vorgesehen, wie zum Beispiel solche mit Zellulären Automaten, Kombinatoren, Registermaschinen und Substitutionssystemen. Sie gilt auch für andere Arten von Berechnungen, die in der theoretischen Informatik gefunden werden, wie Quantencomputing und probabilistisches Computing.
+
+Es gibt widersprüchliche Ansichten über die Church-Turing-These. Die eine besagt, dass sie bewiesen werden kann, und die andere sieht sie als eine Definition für Berechnung. Es gibt keinen Beweis, aber die Evidenz für ihre Gültigkeit kommt von der Tatsache, dass jedes realistische Modell der Berechnung, das bisher entdeckt wurde, als äquivalent gezeigt worden ist. Wäre ein Gerät vorhanden, das Fragen beantworten könnte, die über das hinausgehen, was eine Turing-Maschine beantworten kann, dann würde es als Orakel bezeichnet.
+
+Man sollte jedoch nicht falsch verstehen: Einige Berechnungsmodelle sind effizienter, wie Quantencomputer, aber die Church-Turing-These gilt für jede bisher bekannte Berechnung.
+
+Aber es gibt ein Problem, das kein Berechnungsgerät bisher lösen kann: das Halteproblem (Das Halteproblem bedeutet die Bestimmung, ob eine Turing-Maschine bei einem bestimmten Eingabeprogramm zum Halten kommt. Es ist nicht lösbar für Maschinen mit mehr als vier Zuständen. Das Problem, ob eine allgemeine Turing-Maschine anhält, ist unentscheidbar und wurde erstmals von Turing bewiesen).
+
+
+Fun fact: Quantum cannot calculate more than normal computers - they just calculate specific problems faster.
+
+
+## Normale Turing Machine vs Universelle Turing Maschine
+
+Oft hört und liest man den Begriff "Universelle Turing-Maschine" - aber was steckt hier eigentlich dahinter?
+
+Universelle Turing-Maschine
+
+Die universelle Turing-Maschine (UTM) baut auf dem Konzept der normalen Turing-Maschine auf, indem sie die Fähigkeit besitzt, jede andere Turing-Maschine zu simulieren. Anders als eine für ein spezifisches Problem entworfene Maschine, kann die UTM die Beschreibung und Eingabe jeder beliebigen Turing-Maschine empfangen und deren Verhalten nachahmen.
+
+Obwohl die UTM einen entscheidenden theoretischen Durchbruch darstellt und zeigt, dass es möglich ist, eine Maschine zu konstruieren, die jede berechenbare Funktion ausführen kann, bedeutet dies nicht, dass sie eine Lösung für das Hilbertprogramm liefert. Alan Turing entwickelte die UTM und demonstrierte damit die Grenzen dessen, was durch Berechnungen gelöst werden kann, insbesondere hinsichtlich des Entscheidungsproblems des Hilbertprogramms.
+
+
+Der Unterschied
+
+Der Hauptunterschied zwischen einer normalen Turing-Maschine und einer UTM liegt in deren Universalität. Während eine normale Turing-Maschine für ein bestimmtes Problem entworfen wird, ist die UTM fähig, das Verhalten jeder anderen Turing-Maschine zu simulieren und somit jedes Problem zu lösen, das im Rahmen der Berechenbarkeit lösbar ist.
+
+
+Die Bedeutung der Unterscheidung
+
+Diese Unterscheidung ist essentiell für unser Verständnis von Computern und Programmierung. Sie verdeutlicht, dass die UTM zwar das Prinzip verkörpert, dass ein einziges programmierbares Gerät jede berechenbare Funktion ausführen kann, dies aber nicht impliziert, dass alle mathematischen Probleme lösbar sind. Die Unmöglichkeit, das Entscheidungsproblem zu lösen, wie von Turing aufgezeigt, unterstreicht die Grenzen der Berechenbarkeit und zeigt, dass das Hilbertprogramm in seinem Anspruch, eine vollständige und widerspruchsfreie Axiomatisierung aller mathematischen Wahrheiten zu liefern, nicht erfüllbar ist. Diese Erkenntnis bildet die Grundlage der modernen Informatik und hat unser Verständnis von den theoretischen Grenzen der Computertechnologie geprägt.
 
 ## Turing-Maschinen und Programmiersprachen
 
-    - Wie Turing-Maschinen zur Entwicklung von Programmiersprachen beigetragen haben
-    - Vergleich von Turing-Vollständigkeit in verschiedenen Programmiersprachen
+Hast du dich je gefragt, was es mit dem Ausdruck "Turing-Vollständigkeit" im Zusammenhang mit Programmiersprachen auf sich hat? Dieses Konzept ist zentral, um die Mächtigkeit und Flexibilität einer Programmiersprache zu verstehen.
+Was bedeutet "Turing-Vollständigkeit"?
+
+Kurz gesagt, eine Programmiersprache ist "Turing-vollständig", wenn sie jede Berechnung ausführen kann, die auch eine Turing-Maschine durchführen könnte. Das bedeutet, dass mit dieser Sprache theoretisch jedes denkbare Programmierproblem gelöst werden kann, vorausgesetzt, es gibt genügend Ressourcen (wie Zeit und Speicher).
+
+Die Bedeutung der Turing-Vollständigkeit geht auf Alan Turing zurück, der mit seiner Turing-Maschine ein universelles Berechnungsmodell schuf. Eine Sprache, die Turing-vollständig ist, kann also jedes Problem lösen, das auch auf einer Turing-Maschine lösbar wäre – sie ist in diesem Sinne universell.
+Überraschende Beispiele für Turing-Vollständigkeit
+
+Während viele herkömmliche Programmiersprachen wie Python, Java oder C++ ohne Zweifel Turing-vollständig sind, gibt es auch einige überraschende Beispiele, die zeigen, wie weit dieses Konzept reicht:
+
+- Excel: Ja, Microsoft Excel ist tatsächlich Turing-vollständig. Durch die Verwendung von Formeln und Funktionen kann Excel Berechnungen ausführen, die komplex genug sind, um die Kriterien für Turing-Vollständigkeit zu erfüllen. Dies umfasst die Möglichkeit, Schleifen und bedingte Logik über Formeln zu implementieren.
+
+ - Redstone in Minecraft: Das Spiel Minecraft enthält ein Element namens Redstone, mit dem Spieler komplexe Schaltkreise und Logiksysteme innerhalb des Spiels bauen können. Diese können so komplex werden, dass sie im Wesentlichen als Computer funktionieren, was Redstone-Systeme in Minecraft Turing-vollständig macht.
+
+- LaTeX: LaTeX, ein weit verbreitetes System zur Textsatzgestaltung, besonders beliebt in der akademischen Welt für wissenschaftliche Dokumente, kann so manipuliert werden, dass es Berechnungen ausführt. Durch das Erstellen von Schleifen und Bedingungen innerhalb eines LaTeX-Dokuments können Turing-vollständige Berechnungen durchgeführt werden.
+
+Die Bedeutung der Turing-Vollständigkeit
+
+Die Turing-Vollständigkeit einer Programmiersprache oder eines Systems unterstreicht seine Fähigkeit, komplexe Berechnungen durchzuführen. Es zeigt, dass das System leistungsfähig genug ist, um jede Berechnungsaufgabe zu bewältigen, sofern es nicht durch praktische Einschränkungen wie Speicher oder Verarbeitungsgeschwindigkeit begrenzt wird.
+
+Diese Eigenschaft ist nicht nur ein theoretisches Konzept; sie hat praktische Implikationen für die Entwicklung von Software und die Art und Weise, wie wir Probleme mit Computern lösen. Die Erkenntnis, dass sogar Spielzeuge oder Textverarbeitungssysteme Turing-vollständig sein können, erweitert unser Verständnis davon, was als programmierbare Umgebung betrachtet werden kann.
+
+Doch trotz der universellen Berechnungsfähigkeit von Turing-vollständigen Systemen bleibt das Halteproblem, wie bereits von Turing bewiesen, für sie unlösbar. Dieses Paradoxon unterstreicht die Grenzen dessen, was mit Berechnungen erreicht werden kann, selbst in einer Welt, die durch die unglaubliche Flexibilität der Turing-Vollständigkeit ermöglicht wird.
 
 
-    - Der Vergleich zwischen Turing-Maschinen und realen Computern: Was unterscheidet sie und was haben sie gemeinsam?
-    - Die Bedeutung der Turing-Maschine für die Entwicklung von Programmiersprachen und Algorithmen.
-    - Beispiele für Turing-vollständige Systeme in der modernen Welt (z.B. Programmiersprachen, Cellular Automata).
-
-
-##  EVTL: Anwendung von Turing Maschinen
-
-
-    - Praktische Anwendungen von Turing-Maschinen und deren theoretischen Modellen
-    - Moderne Forschung und experimentelle Computer, die auf dem Konzept der Turing-Maschine basieren
-
-## Herausforderungen und Grenzen von Turing Maschinen
-
-
-    - Berechnungsgrenzen von Turing-Maschinen
-    - Unentscheidbarkeitsprobleme und das Halteproblem
-
-## Die Zukunft der Turing Maschinen
-
--     Zusammenfassung der wichtigsten Punkte
-    - Die anhaltende Bedeutung von Turing-Maschinen für die Informatik und darüber hinaus
-
-
-IRGENDWAS mit Quantencomputern!
+## More Resources
+Feel free to checkout a the Website of Alan Turing https://www.turing.org.uk/index.html. Especially, take a look at the Turing Machines Simulator (https://www.turing.org.uk/book/update/tmjavar.html).
