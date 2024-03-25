@@ -9,6 +9,7 @@
 
 
 ## Einführung
+
 Das Jahr 1936. Der britische Mathematiker Alan Turing brachte eine Idee hervor, die nicht nur das Verständnis der mathematischen Berechenbarkeit revolutionieren sollte, sondern auch einen entscheidenende Wendepunkt in der Geschichte der Computertechnologie markierte. Diese Idee, die Turing-Maschine, war Turings Antwort auf das Hilbertprogramm - eine Herausforderung, die vom deutschen Mathematiker David Hilbert in den 1920er Jahren formuliert wurde. Das Programm hatte das Ziel, alle mathematischen Aussagen durch ein festgelegtes System von Axiomen und Regeln vollständig und widerspruchsfrei zu beweisen, mit dem Ziel, die Grundfesten der Mathematik zu stärken.
 
 Vor der Veröffentlichung von Turing's Maschine waren die existierenden REchnermaschine, wie die Buchhaltungsmaschinen von IBM, auf speziefische, sehr eng definierte Aufgaben beschränkt. Selbst die etwas flexibleren Maschinen, die durch Stecktafeln programmiert wurdne, konnten nicht ide Universalität und theoretische Tragweite erreichen, die Turing mit seiner abstrakten Maschine vor Augen hatte. Turing's Maschine unterschied sich grundlegend von diesen Machinen - sie war theoretisch in der Lage, jedes Problem zu lösen, das matehmatisch formuliert werden kann, sofern genügend Zeit und Speicherplatz zur Verfügung stehen.
