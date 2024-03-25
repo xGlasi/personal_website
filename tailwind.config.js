@@ -35,6 +35,11 @@ module.exports = {
         'customLightGray2': '#424242',
         'customBlue': '#7e6ee0',
       },
+      padding: {
+        '50': '12.5rem',
+        '75': '18.75rem',
+        '100': '25rem',
+      }
     },
   },
   plugins: [],

@@ -4,21 +4,29 @@
 :cover_image_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Turing_Machine_Model_Davey_2012.jpg
 :url: turing-machines
 :slug: turing turingmachine
+:imagesdir: ../resources
 
-# Turing Machines
+= Turing Machines
 
+image::Turing_Machine.jpg[]
 
-## Einführung
+== Einführung
 
-Das Jahr 1936. Der britische Mathematiker Alan Turing brachte eine Idee hervor, die nicht nur das Verständnis der mathematischen Berechenbarkeit revolutionieren sollte, sondern auch einen entscheidenende Wendepunkt in der Geschichte der Computertechnologie markierte. Diese Idee, die Turing-Maschine, war Turings Antwort auf das Hilbertprogramm - eine Herausforderung, die vom deutschen Mathematiker David Hilbert in den 1920er Jahren formuliert wurde. Das Programm hatte das Ziel, alle mathematischen Aussagen durch ein festgelegtes System von Axiomen und Regeln vollständig und widerspruchsfrei zu beweisen, mit dem Ziel, die Grundfesten der Mathematik zu stärken.
+[.text-left]
+== Einführung
+
+Das Jahr 1936. Der britische Mathematiker Alan Turing brachte eine Idee hervor, die nicht nur das Verständnis der mathematischen Berechenbarkeit revolutionieren sollte, sondern auch einen entscheidenden Wendepunkt in der Geschichte der Computertechnologie markierte. Diese Idee, die Turing-Maschine, war Turings Antwort auf das Hilbertprogramm - eine Herausforderung, die vom deutschen Mathematiker David Hilbert in den 1920er Jahren formuliert wurde. Das Programm hatte das Ziel, alle mathematischen Aussagen durch ein festgelegtes System von Axiomen und Regeln vollständig und widerspruchsfrei zu beweisen, mit dem Ziel, die Grundfesten der Mathematik zu stärken.
+
+image::../resources/Alan_Turing.jpg[align="right", width="50%"]
+
 
 Vor der Veröffentlichung von Turing's Maschine waren die existierenden REchnermaschine, wie die Buchhaltungsmaschinen von IBM, auf speziefische, sehr eng definierte Aufgaben beschränkt. Selbst die etwas flexibleren Maschinen, die durch Stecktafeln programmiert wurdne, konnten nicht ide Universalität und theoretische Tragweite erreichen, die Turing mit seiner abstrakten Maschine vor Augen hatte. Turing's Maschine unterschied sich grundlegend von diesen Machinen - sie war theoretisch in der Lage, jedes Problem zu lösen, das matehmatisch formuliert werden kann, sofern genügend Zeit und Speicherplatz zur Verfügung stehen.
 
 Durch die Definition dieser einfachen, aber ungemein mächstens Modells, lieferte Turing nicht nur den theoreitschen Unterbau für den ersten Universalcomputer, sondern stelle auch das Hilbertprogramm in Frage. Turings FOrschung offenbarte, dass es bestimmte mathemtische PRobleme gibt, die prinzipiell unlösbar sind, was der Annahme des Hilbertprogramms widersprache, dass es möglich sei, ein vollständiges und konsistentes System von Axiomen für die gesamte Mathematik zu etablieren. Insbesondere das von ihm vorgestellte Halteproblem demonstriert, dass kein algorithmisches Verfahren existieren kan, das für jede denkbare Eingabe entscheidet, ob eine Turing-Maschine anhalten wird oder nicht.
 
-Diese Erkenntnis hatte weitreichende FOlgen für die Mathematik und legte den Grundstein für die Informatik als eigendständige Disziplin. Die Implikationen von Turings Arbeit reichen bis in die heutige Zeit, in er die Prinzipien der Turing-Maschine in jedem Computer, jedem Smartphone und in der Softaare, die unsere digitale Welt antreibt, widerhallen.
+Diese Erkenntnis hatte weitreichende Folgen für die Mathematik und legte den Grundstein für die Informatik als eigendständige Disziplin. Die Implikationen von Turings Arbeit reichen bis in die heutige Zeit, in er die Prinzipien der Turing-Maschine in jedem Computer, jedem Smartphone und in der Softaare, die unsere digitale Welt antreibt, widerhallen.
 
-## Die Grundlagen der Turing-Maschine
+== Die Grundlagen der Turing-Maschine
 
 Alan Turing stellte sich in seinem bahnbrechenden Paper eine Maschine vor, die heutzutage als Turing-Maschine bekannt ist. Diese Vorstellung basierte auf der Idee eines Menschen in einem Kasten, der mit einem Bleistift und einem Stapel Papier ausgestattet ist, zusammen mit einem Buch voller Anweisungen. Die zentrale Einsicht Turings bestand darin, Verhalten durch Symbole zu definieren und zu steuern, anstatt auf physische Mechanismen zu setzen.
 Wie funktioniert eine Turing-Maschine?

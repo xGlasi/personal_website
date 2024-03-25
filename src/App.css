@@ -37,7 +37,6 @@
   }
 }
 
-/* Beispiel für globale Stile in globals.css */
 h2 {
   @apply text-2xl font-bold my-4;
 }
