@@ -5,44 +5,81 @@
 :url: turing-machines
 :slug: turing turingmachine
 
-### Einleitung
-https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf[Turing's Paper] ist wohl eines der einflussreichsten Paper der Informatik jemals. Das Konzept der Turing-Maschine, das er im Paper behandelt, hat extrem viele Auswirkungen von auf die theoretische Informatik: Die Frage der Berechenbarkeit, "Turing"-Complete und noch viel mehr.
-
-Aber was ist eigentlich eine Turing Maschine? Wie funktioniert sie wirklich?
-
-### Historisches Kontext
-Am Anfang des 20. Jahrhunderts übernahmen Maschinen bereits viele körperliche Aufgaben von Menschen. Bereits zu dieser Zeit leisteten die durch Stecktafeln programmierte Buchhaltungsmaschinen von IBM beeindruckende Arbeit, indem sie Berechnungen durchführten und Zwischenergebnisse speicherten, um auf diesen aufzubauen.
-
-Doch die Maschinen hatten ein Problem: Sie waren extrem unflexibel. Ausgelöst durch dieses Problem stellten sich Wissenschaftler die Frage, wie man den Prozess der Automatisierung von geistiger Arbeit vorantreiben könnte - könnte man vielleicht sogar eine Maschine erschaffen, die nicht nur rechnen, sondern auch "denken" kann?
-
-Die Herausforderung, die der Mathematiker Hilbert der akademischen Gemeinschaft stellte, darunter die Frage, ob Maschinen existieren könnten, die mathematische Aussagen als wahr oder falsch identifizieren könnten, spitzten diese Überlegungen zu. Dieses Konzept einer "Denkmaschine" war faszinierend, es blieb jedoch eine unergründete Frontier. Es war in diesem Kontext, als Alan Turing in seinem Paper die Grundlage für das legte, was wir heute als Turing-Maschine kennen.
-
-### Von der Theorie zur Praxis: Die Einführung der Turing-Maschine
-
-Turing griff diese grundlegenden Fragen auf und schlug mit seiner Arbeit ein universelles Modell vor, das die Grenzen und Möglichkeiten der Berechnung definiert. Die Turing-Maschine, eine abstrakte Rechenmaschine, war dabei mehr als nur eine Antwort auf Hilberts Probleme; sie war ein Paradigmenwechsel, der das Fundament der modernen Informatik legen sollte. Turing demonstrierte, dass eine solche Maschine in der Lage sein könnte, jede berechenbare Funktion auszuführen, vorausgesetzt, sie ist durch einen Algorithmus darstellbar. Damit löste er nicht nur das Problem der Unflexibilität bisheriger Maschinen, sondern öffnete auch das Tor zur theoretischen Möglichkeit von Maschinen, die "denken" können.
-
-Die Einführung der Turing-Maschine brachte Licht in das Dunkel der Berechenbarkeit und legte die Basis für das Verständnis dessen, was es bedeutet, wenn wir sagen, dass etwas durch einen Computer berechnet werden kann. Mit seiner Arbeit setzte Turing den Grundstein für die Entwicklung der Computerwissenschaft und ebnete den Weg für die digitale Revolution, die folgen sollte. Im nächsten Abschnitt werden wir tiefer in die spezifischen Probleme eintauchen, die Turing-Maschinen lösen, und wie sie das Verständnis von Berechenbarkeit und Algorithmik bis heute prägen.
-
-### Introduction
-Turing Machines sind ein grundlegendes Konzetp in der Theoretischen Informatik und bilden ein Modell für Berechenbarkeit und Komplexitätstheorie. Sie wurden von Alan Turing 1936 in seinem Paper eingeführt, um das Entscheidungsproblem in der Mathematik zu adressieren. Es adressiert folgende Probleme:
-- Was bedeutet es, dass eine Funktion oder ein Problem berechenbar ist?
-Turing-Maschinen bieten ein präzises Modell dafür, was es bedeutet, wenn gesagt wird, dass eine Funktion druch einen Algorithmus berechenbar ist. Wenn eine Funktion durh eine Turing-Maschine berechnet werden kann, gilt sie als berechenbar.
-
-- Grenzen der Berechenbarkeit
-Gleichzeitig helfen Turing-Maschinen dabei, die Grenzen dessen zu erkunden, was Algorithmen leisten könnten. Ein berühmtes Ergebnis in diesem Zusammenhang ist das Halteproblem, das beweist, dass es keine allgemeine LÖsung gibt, um zu bestimmen, ob eine beliebige Turing_Maschine für eine gegebene Eingabe anhält oder nicht. Dies zeigt die inhärenten Grenzen dessen, was durch Algorithmen entschieden werden kann
+# Turing Machines
 
 
-- Vergleich verschiedener Berechnungsmodelle
-Durch Turing-Maschinen kann gezeigt werden, dass verschiedene Berechnungsmodelle äquivalent in ihrer Fähigkeit sind, Probleme zu lösen. Die Church-Turing-These postuliert, dass jede Funktion, die natürlich berechenbar ist, durch eine Turing-Maschine berechnet werden kann. 
-
-- Grundlage der Komplexitätstheorie
-Turing-maschinen dienen als Grundlage für die Komplexitätstheorie, die sich mit der KLassifizierung von Problemen basierend auf dem Ressourcenbedarf (wie Zeit und Speicher) für ihre Lösung befasst. Komplexitätsklassen wie P, NP und andere sind in Bezug auf Turing-Maschinen definiert.
+## Einführung
 
 
-### Wie funktioniert es eigentlich?
+Das Jahr 1936. Der Mathematiker David Hilbert hatte mit dem Jahr 1920 formulierten Hilbertprogramm das ehrgeizige Ziel, alle mathematischen Aussagen durch ein festgelegtes System von Axiomen und Regeln vollständig und widerspruchsfrei zu beweisen. 
+
+Im Rahmen dieses Forschungsprogrammes stellt der weltberühmte Alan Turing viele Jahre, bevor es überhaupt den ersten Computer gibt, sein mathmatisches Modell der Turing-Maschine vor, das eine abstrakte Maschine definiert, das viele Probleme löst.
+
+Bis zur Veröffentlichung der Turing-Maschine gab es nur Maschinen, die auf eng definierte Aufbauen ausgelegt wurden, so z.B. die Buchhaltungsmaschinen von IBM und bereits ein wenig mehr flexiblere Maschinen, die mit Stecktafeln programmiert wurden.
+
+
+Dieser Blog soll einen kleinen Einblick geben in die umfangreiche und Komplexe Thematik der Turing-Maschinen. Bereits über die Geschichte dahinter würde sich ein Buch schreiben lassen, aber ich versuche im Folgenden den Lesern ein Verständnis in die Turing-Maschinen zu geben und zu zeigen, wie diese Maschinen noch heute Einfluss auf die Informatik haben.
 
 
 
+- Kurz Einführung in Alan Turing und die Historie der Turing-Maschine
+- Überblick über die Inhalte des Blogs und was den Leser erwartet.
+
+## Grundlagen der Turing Maschinen
+
+Gut, was ist aber jetzt eine Turing-Maschine & wie funktioniert sie?
+
+In seinem Paper beginnt er, sich eine Maschine als einem Menschen in einem Kasten vorzustellen, mit einem Bleistift und einem Stapel Papier, und ihm wird ein Buch mit Anweisungen zum Befolgen übergeben. Um also zu ändern, was dieser Mensch tut, muss man die Anweisungen in dem Buch verändern - das ist die erste tiefe Einsicht, die Alan Turing hatte: Verhalten mit Symbolen statt mit Mechanismen zu definieren.
+
+Das war zu seiner Zeit bereits ein sehr cleverer Trick. Daher verbringt er die ersten 60% seines Papers damit, zu erklären, wie es funktionieren würde und welche Form diese schriftliche Anweisungen oder Algirhtmen men annehmen würden, wie folgt:
+
+Stellen Sie sich jede Seite in diesem Buch der Anweisungen als eine einzelne Entscheidung vor. Zuerst kommt eine Beobachtung, die der "Wenn"-Teil der bedingten Aussage ist, und was die Person beobachtet, ist genau, wo ihr Bleistift im Entwurf hinzeigt. In unserem Beispiel ist es das erste Symbol der Eingabe. Er nennt das ihr Bewusstsein, sodass sie immer nur eines Symbols bewusst ist.
+
+Als Nächsten schauen Sie in ihre Anweisungen und vergleichen das Symbol in ihrem Bewusstsein mit einer Liste von Möglichkeiten in der ersten Spalte, um eine Übereinstimmung zu finden. Sobald eine Übereinstimmung gefunden ist, gehen Sie zum zweiten Schritt der bedingten Aussage über: der Operationsschritt.
+Turing stellt fest, dass unabhängig von der Anweisung oder in welcher Sprache Sie sind, sie immer nur Symbole auf dem Papier aufschreiben und/oder ihre Aufmerksamkeit auf einen neue Ort verschieben werden.
+Daher listet die letzte Spalte in der Tabelle, genannt "Nächster Zustand", die nächste Seite auf, zu der gesprungen werden soll.
+
+In dieser Buchanalogie ist jede Seite im Buch ein neuer Schritt. Turing nennt diese Schritte Zustände der Maschine. Wenn der nächste Zustand erreicht ist, wird ihr aktuelles Bewusstsein, wo der Stift gerade hinzeigt, erneut beobachtet, und dann scannen sie, um auf die gleiche Weise eine Übereinstimmung zu finden. Sobald Sie das tun, folgenden Sie der Sequenz und springen dann zum nächsten Zustand. Und dieser Prozess setzt sich Zustand für Zustand fort. So ist der Prozess der Berechnung genau wie das Umblättern von Seiten in einem Buch, und auf jeder Seite wird eine Entscheidung darüber getroffen, was als Nächsten zu tun ist, basierend darauf, wo der Bleistift auf eine separate Seite hinzeigt. 
+Beachten Sie, dass dieses Buch nicht in derselbw3e
 
 
+    - Definition und technische Beschreibung
+    - Komponenten einer Turing-Maschine (Band, Lese-/Schreibkopf, Zustände)
+    - Wie Turing-Maschinen funktionieren (mit einem einfachen Beispiel)
 
+## Theoretische Grundlagen und Bedeutung
+
+    - Unentscheidbarkeitsprobleme: Das Halteproblem und seine Bedeutung für die Berechenbarkeitstheorie.
+    - Die Church-Turing-These: Erklärung und Bedeutung für die Informatik und Künstliche Intelligenz.
+    - Universalität der Turing-Maschine und die Idee des Turing-vollständigen Systems.
+
+## Turing-Maschinen und Programmiersprachen
+
+    - Wie Turing-Maschinen zur Entwicklung von Programmiersprachen beigetragen haben
+    - Vergleich von Turing-Vollständigkeit in verschiedenen Programmiersprachen
+
+
+    - Der Vergleich zwischen Turing-Maschinen und realen Computern: Was unterscheidet sie und was haben sie gemeinsam?
+    - Die Bedeutung der Turing-Maschine für die Entwicklung von Programmiersprachen und Algorithmen.
+    - Beispiele für Turing-vollständige Systeme in der modernen Welt (z.B. Programmiersprachen, Cellular Automata).
+
+
+##  EVTL: Anwendung von Turing Maschinen
+
+
+    - Praktische Anwendungen von Turing-Maschinen und deren theoretischen Modellen
+    - Moderne Forschung und experimentelle Computer, die auf dem Konzept der Turing-Maschine basieren
+
+## Herausforderungen und Grenzen von Turing Maschinen
+
+
+    - Berechnungsgrenzen von Turing-Maschinen
+    - Unentscheidbarkeitsprobleme und das Halteproblem
+
+## Die Zukunft der Turing Maschinen
+
+-     Zusammenfassung der wichtigsten Punkte
+    - Die anhaltende Bedeutung von Turing-Maschinen für die Informatik und darüber hinaus
+
+
+IRGENDWAS mit Quantencomputern!
