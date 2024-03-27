@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import supabaseService from "../services/supabaseClient";
 
 export default async function Newsletter() {
-  const { success } = await supabaseService.subscribeToNewsletter(emailAddress)
+  const [emailAddress, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
-  if (success) {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await supabaseService.subscribeToNewsletter(emailAddress)
+    setIsSubscribed(true);
+  };
+
+  
+  if (isSubscribed) {
     return (
       <div className="h-screen flex flex-col items-center justify-center">
         <p className="text-white font-bold text-3xl">
