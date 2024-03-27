@@ -1,4 +1,5 @@
 import BlogCard from '../components/BlogCard'; 
+import { usePosts } from '../hooks/usePosts';
 
 export default function Blog() {
   const { posts } = usePosts();
