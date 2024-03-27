@@ -3,7 +3,7 @@ import BlogCard from './BlogCard';
 import { usePosts } from '../hooks/usePosts';
 
 export default function LatestBlogs() {
-  const [ posts ] = usePosts()
+  const { posts } = usePosts()
 
     return (
         <div className="z-10 relative border border-customLightGray p-5 rounded-lg">

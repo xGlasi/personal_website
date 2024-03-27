@@ -85,9 +85,6 @@ class SupabaseService {
   }
 }
 
-console.log(process.env.REACT_APP_SUPABASE_URL)
-console.log(process.env.REACT_APP_SUPABASE_ANON_KEY)
-const supabaseService = new SupabaseService(process.env.REACT_APP_SUPABASE_URL, 
-  process.env.REACT_APP_SUPABASE_ANON_KEY);
+const supabaseService = new SupabaseService(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_ANON_KEY);
 
 export default supabaseService;
