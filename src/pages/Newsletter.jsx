@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import supabaseService from "../services/supabaseClient";
 
 export default async function Newsletter() {
-  const [emailAddress, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const {emailAddress, setEmail} = useState('');
+  const {isSubscribed, setIsSubscribed} = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
