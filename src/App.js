@@ -18,7 +18,7 @@ function App() {
     <>
       <div className="bg-customDarkGray flex flex-col h-screen">
         <Header/>
-        <main className="flex-grow overflow-auto">
+        <main className="flex-grow overflow-auto pb-0">
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/Blog" element={<Blog/>}/>

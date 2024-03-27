@@ -20,7 +20,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="z-30 relative p-3 md:p-20 md:pt-0 ">
+        <div className="z-30 relative p-3 md:p-20 md:pt-0 md:pb-0">
             <LatestBlogs />
         </div>
       </>
