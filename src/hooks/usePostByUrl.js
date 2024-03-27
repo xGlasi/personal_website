@@ -1,28 +1,28 @@
 import { useState, useEffect } from 'react';
 import supabaseService from '../services/supabaseClient';
 
-export const usePosts = () => {
-  const [posts, setPosts] = useState([]);
+export const usePostByUrl = (url) => {
+  const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchPost = async () => {
       setLoading(true);
       try {
-        const { data, error } = await supabaseService.fetchPosts();
+        const { data, error } = await supabaseService.fetchPostByUrl(url);
         if (error) throw error;
-        setPosts(data);
+        setPost(data);
       } catch (error) {
-        console.error('Fehler beim Abrufen der Posts:', error.message);
+        console.error('Fehler beim Abrufen des Posts:', error.message);
         setError(error.message);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchPosts();
-  }, []);
+    if (url) fetchPost();
+  }, [url]);
 
-  return { posts, loading, error };
+  return { post, loading, error };
 };
