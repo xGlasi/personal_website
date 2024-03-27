@@ -1,25 +1,11 @@
 import LatestBlogs from "../components/LatestBlogs";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import CSharpCodeTypewriter from "../components/CSharpCodeTypeWriter";
-import supabaseService from '../services/supabaseClient';
 import SocialMedia from "../components/SocialMedia";
+import { usePosts } from '../hooks/usePosts';
 
 export default function Home() {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const { data, error } = await supabaseService.fetchPosts();
-
-      if (error) {
-        console.log('Fehler beim Abrufen der Posts:', error);
-      } else {
-        setPosts(data);
-      }
-    };
-
-    fetchPosts();
-  }, []);
-
+  const [ posts ] = usePosts()
 
     return (
       <>

@@ -1,31 +1,10 @@
-import React, { useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
+import React from 'react';
+import supabaseService from "../services/supabaseClient";
 
-export default function Newsletter() {
-  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-  const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
-  
-  const supabase = createClient(supabaseUrl, supabaseAnonKey);
-  const [emailAddress, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
+export default async function Newsletter() {
+  const { success } = await supabaseService.subscribeToNewsletter(emailAddress)
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const { error } = await supabase
-      .from('newsletter_subscribers')
-      .insert({ email: emailAddress }); 
-
-    if (error) {
-      alert('Es gab ein Problem beim Speichern Ihrer E-Mail. Bitte versuchen Sie es später erneut.');
-      console.error('Fehler beim Speichern in Supabase:', error);
-      return;
-    }
-
-    setIsSubscribed(true);
-  };
-
-  if (isSubscribed) {
+  if (success) {
     return (
       <div className="h-screen flex flex-col items-center justify-center">
         <p className="text-white font-bold text-3xl">
