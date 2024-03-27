@@ -1,22 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import supabaseService from '../services/supabaseClient';
 import BlogCard from '../components/BlogCard'; 
 
 export default function Blog() {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const { data, error } = await supabaseService.fetchPosts();
-
-      if (error) {
-        console.log('Fehler beim Abrufen der Posts:', error);
-      } else {
-        setPosts(data);
-      }
-    };
-
-    fetchPosts();
-  }, []);
+  const { posts } = usePosts();
 
   return (
     <div className="mx-auto p-4 md:p-20" style={{ maxWidth: '75%' }}>

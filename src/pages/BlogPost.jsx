@@ -1,31 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import supabaseService from '../services/supabaseClient';
+import { usePostByUrl } from '../hooks/usePostByUrl';
 
 const BlogPost = () => {
   const { url } = useParams();
-  const [post, setPost] = useState(null);
+  const { post, loading, error } = usePostByUrl(url);
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      const { data, error } = await supabaseService.fetchPostByUrl(url);
-
-      if (error) {
-        console.log('Fehler beim Abrufen des Posts:', error);
-      } else {
-        setPost(data);
-      }
-    };
-
-    fetchPost();
-  }, [url]);
-
-  if (!post) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <div className="post-container">
       <h1>{post.title}</h1>
-      <div class="p-5" dangerouslySetInnerHTML={{ __html: post.content }} />
+      <div className="p-5" dangerouslySetInnerHTML={{ __html: post.content }} />
     </div>
   );
 };
