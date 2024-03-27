@@ -1,7 +1,10 @@
 import React from 'react';
 import BlogCard from './BlogCard';
+import { usePosts } from '../hooks/usePosts';
 
-export default function LatestBlogs({ posts }) {
+export default function LatestBlogs() {
+  const [ posts ] = usePosts()
+
     return (
         <div className="z-10 relative border border-customLightGray p-5 rounded-lg">
             <p className="text-white text-3xl font-bold pl-5">

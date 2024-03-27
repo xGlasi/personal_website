@@ -2,11 +2,8 @@ import LatestBlogs from "../components/LatestBlogs";
 import React from 'react';
 import CSharpCodeTypewriter from "../components/CSharpCodeTypeWriter";
 import SocialMedia from "../components/SocialMedia";
-import { usePosts } from '../hooks/usePosts';
 
 export default function Home() {
-  const [ posts ] = usePosts()
-
     return (
       <>
         <div className="relative
@@ -24,7 +21,7 @@ export default function Home() {
         </div>
 
         <div className="z-30 relative p-3 md:p-20">
-            <LatestBlogs posts={posts}/>
+            <LatestBlogs />
         </div>
       </>
     )
