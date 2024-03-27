@@ -10,7 +10,7 @@ export default function LatestBlogs() {
             <p className="text-white text-3xl font-bold pl-5">
                 My latest blog posts:
             </p>
-            <div className="grid z-10 min-h-[400px] relative grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
+            <div className="grid z-10  xl:w-1/2  relative grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
                 {posts.slice(0, 3).map((post) => (
                     <div key={post.id}>
                         <BlogCard

@@ -8,7 +8,7 @@ export default function Home() {
       <>
         <div className="relative
          text-white p-3 md:p-20 md:h-[520px] flex flex-grow items-stretch justify-between rounded-lg z-10">            
-          <div className="p-5 border border-customLightGray rounded-lg z-20 w-full overflow-hidden">
+          <div className="p-5 border border-customLightGray rounded-lg z-20 w-full">
               <CSharpCodeTypewriter/>
           </div>
 
@@ -20,7 +20,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="z-30 relative p-3 md:p-20">
+        <div className="z-30 relative p-3 md:p-20 md:pt-0 ">
             <LatestBlogs />
         </div>
       </>
